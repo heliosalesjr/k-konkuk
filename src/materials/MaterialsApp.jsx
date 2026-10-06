@@ -1,30 +1,17 @@
 import { useEffect, useState } from 'react'
-import Hero from './sections/Hero'
-import Greetings from './sections/Greetings'
-import Structure from './sections/Structure'
-import Batchim from './sections/Batchim'
-import Copula from './sections/Copula'
-import Topic from './sections/Topic'
-import Negation from './sections/Negation'
-import Speaking from './sections/Speaking'
-import Vocab from './sections/Vocab'
-import Quiz from './sections/Quiz'
+import Present from './Present'
+import Past from './Past'
+import Adverbs from './Adverbs'
 
 const NAV = [
-  { id: 'start', label: '🏠 Start' },
-  { id: 'greetings', label: '👋 인사' },
-  { id: 'structure', label: '🧱 Word order' },
-  { id: 'batchim', label: '🔍 받침' },
-  { id: 'ieyo', label: '🙋 이에요/예요' },
-  { id: 'eunneun', label: '🌍 은/는' },
-  { id: 'anieyo', label: '🚫 아니에요' },
-  { id: 'speak', label: '🎤 말하기' },
-  { id: 'words', label: '📚 Words' },
-  { id: 'quiz', label: '📝 Quiz' },
+  { id: 'top', label: '🏠 Início' },
+  { id: 'present', label: '🕒 현재' },
+  { id: 'past', label: '⏪ 과거' },
+  { id: 'adverbs', label: '🔸 부사' },
 ]
 
 function Nav() {
-  const [active, setActive] = useState('start')
+  const [active, setActive] = useState('top')
   useEffect(() => {
     const obs = new IntersectionObserver(
       (entries) => entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
@@ -49,26 +36,30 @@ function Nav() {
             {n.label}
           </a>
         ))}
+        <a href="index.html" className="shrink-0 rounded-full bg-white px-4 py-1.5 text-lg font-bold text-slate-700 shadow-sm hover:bg-yellow-100">
+          ← Course
+        </a>
       </div>
     </nav>
   )
 }
 
-export default function App() {
+export default function MaterialsApp() {
   return (
     <div className="min-h-screen">
       <Nav />
       <main className="mx-auto max-w-5xl space-y-16 px-4 pb-24 pt-6 sm:space-y-20">
-        <Hero />
-        <Greetings />
-        <Structure />
-        <Batchim />
-        <Copula />
-        <Topic />
-        <Negation />
-        <Speaking />
-        <Vocab />
-        <Quiz />
+        <header id="top" className="scroll-mt-24 rounded-[2.5rem] bg-gradient-to-br from-emerald-300 via-sky-300 to-violet-300 p-6 shadow-xl sm:p-10">
+          <p className="text-sm font-extrabold uppercase tracking-widest text-slate-800/70">건국 한국어 1-1 · Materials · 2nd batch</p>
+          <h1 className="mt-2 font-kr text-6xl leading-tight text-slate-900 sm:text-8xl">문법 정리</h1>
+          <p className="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">Present · Past · Adverbs</p>
+          <p className="mt-4 max-w-2xl text-base font-semibold text-slate-800 sm:text-lg">
+            Verbs and adjectives as the book teaches them (어휘 1–2, 문법 및 표현 1–4), with the worksheet and handout rules. Tap 🔊 to hear any Korean.
+          </p>
+        </header>
+        <Present />
+        <Past />
+        <Adverbs />
         <footer className="pt-8 text-center">
           <p className="font-kr text-3xl text-slate-700">수고했어요! 🎉</p>
           <p className="text-sm text-slate-500">Great work — Korean Regular Course · Konkuk University</p>
