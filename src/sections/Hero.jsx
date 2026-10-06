@@ -53,6 +53,19 @@ export default function Hero() {
         </div>
       </div>
 
+      <div className="grid gap-3 sm:grid-cols-2">
+        <a href="#greetings" className="rounded-[2rem] bg-gradient-to-br from-yellow-200 to-rose-100 p-5 shadow-md ring-2 ring-white transition hover:scale-[1.01]">
+          <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">Lesson 1 · 1과</div>
+          <div className="font-kr text-3xl text-slate-900">인사와 소개</div>
+          <div className="text-sm font-semibold text-slate-700">Greetings &amp; introductions · you are here</div>
+        </a>
+        <a href="materials.html" className="rounded-[2rem] bg-gradient-to-br from-sky-200 to-violet-100 p-5 shadow-md ring-2 ring-white transition hover:scale-[1.01]">
+          <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">Lesson 2 · 2과 materials</div>
+          <div className="font-kr text-3xl text-slate-900">현재 · 과거 · 부사</div>
+          <div className="text-sm font-semibold text-slate-700">Present · Past · Adverbs →</div>
+        </a>
+      </div>
+
       <div className="rounded-[2rem] bg-white/90 p-5 shadow-md sm:p-7">
         <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
           <div>
