@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import Present from './Present'
 import Past from './Past'
 import Adverbs from './Adverbs'
+import Writing from './Writing'
 
 const NAV = [
   { id: 'top', label: '🏠 Início' },
   { id: 'present', label: '🕒 현재' },
   { id: 'past', label: '⏪ 과거' },
   { id: 'adverbs', label: '🔸 부사' },
+  { id: 'writing', label: '✍️ 쓰기' },
 ]
 
 function Nav() {
@@ -52,7 +54,7 @@ export default function MaterialsApp() {
         <header id="top" className="scroll-mt-24 rounded-[2.5rem] bg-gradient-to-br from-emerald-300 via-sky-300 to-violet-300 p-6 shadow-xl sm:p-10">
           <p className="text-sm font-extrabold uppercase tracking-widest text-slate-800/70">건국 한국어 1-1 · Materials · 2nd batch</p>
           <h1 className="mt-2 font-kr text-6xl leading-tight text-slate-900 sm:text-8xl">문법 정리</h1>
-          <p className="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">Present · Past · Adverbs</p>
+          <p className="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">Present · Past · Adverbs · Writing</p>
           <p className="mt-4 max-w-2xl text-base font-semibold text-slate-800 sm:text-lg">
             Verbs and adjectives as the book teaches them (어휘 1–2, 문법 및 표현 1–4), with the worksheet and handout rules. Tap 🔊 to hear any Korean.
           </p>
@@ -60,6 +62,7 @@ export default function MaterialsApp() {
         <Present />
         <Past />
         <Adverbs />
+        <Writing />
         <footer className="pt-8 text-center">
           <p className="font-kr text-3xl text-slate-700">수고했어요! 🎉</p>
           <p className="text-sm text-slate-500">Great work — Korean Regular Course · Konkuk University</p>
