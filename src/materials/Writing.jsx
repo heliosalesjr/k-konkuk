@@ -156,6 +156,11 @@ const SNACK = [
 
 /* ------------------------------------------------------------------ Small pieces */
 
+// Inline highlight: dark blue instead of bold, so it reads clearly next to the black text.
+function Hi({ children }) {
+  return <span className="text-blue-700">{children}</span>
+}
+
 function Step({ kr, en, why, n }) {
   return (
     <div className="flex gap-3 rounded-2xl bg-white p-3 shadow-sm ring-1 ring-slate-100">
@@ -245,7 +250,7 @@ export default function Writing() {
         </H3>
         <div className="grid gap-3 sm:grid-cols-2">
           <Callout kind="note" title="Writing 1 — 지난주 토요일에 뭐 했어요?">
-            <p>Fill the table (시간 · 어디에서 · 뭐 했어요? · 어땠어요?), then turn every row into 2–3 past-tense sentences. The last column is the one that makes it sound Korean: always say how it <b>was</b>.</p>
+            <p>Fill the table (시간 · 어디에서 · 뭐 했어요? · 어땠어요?), then turn every row into 2–3 past-tense sentences. The last column is the one that makes it sound Korean: always say how it <Hi>was</Hi>.</p>
           </Callout>
           <Callout kind="note" title="Writing 2 — 한국 음식에 대해서 쓰세요">
             <p>Answer the five questions, then glue the answers together. The 보기 moves in a fixed order: what → where → why → what later → with whom.</p>
@@ -320,7 +325,7 @@ export default function Writing() {
         </div>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <Callout kind="rule" title="Hours = native numbers, minutes = Sino numbers">
-            <p className="font-kr text-lg">2시 30분 → <b>두 시 삼십 분</b></p>
+            <p className="font-kr text-lg">2시 30분 → <Hi>두 시 삼십 분</Hi></p>
             <p>Never 이 시. The hour uses 하나·둘·셋 (→ 한·두·세 before 시); the minute uses 일·이·삼.</p>
           </Callout>
           <Callout kind="tip" title="오전 / 오후 come FIRST">
@@ -334,27 +339,27 @@ export default function Writing() {
         <H3 sub="Both worksheets lean on these four. They are the glue of the whole text.">The four connectors doing all the work</H3>
         <div className="grid gap-3 sm:grid-cols-2">
           <Callout kind="rule" title="A-고 A  ·  V-고 V">
-            <p className="font-kr text-lg">커피가 뜨겁<b>고</b> 맛있었어요.</p>
-            <p className="font-kr text-lg">샤워하<b>고</b> 잤어요.</p>
-            <p>With adjectives it means "and"; with verbs it means "and then". Tense goes on the <b>last</b> verb only.</p>
+            <p className="font-kr text-lg">커피가 뜨겁<Hi>고</Hi> 맛있었어요.</p>
+            <p className="font-kr text-lg">샤워하<Hi>고</Hi> 잤어요.</p>
+            <p>With adjectives it means "and"; with verbs it means "and then". Tense goes on the <Hi>last</Hi> verb only.</p>
           </Callout>
           <Callout kind="rule" title="-지 않다  (not)">
-            <p className="font-kr text-lg">비싸<b>지 않았어요</b>. · 맵<b>지 않고</b> 맛있어요.</p>
+            <p className="font-kr text-lg">비싸<Hi>지 않았어요</Hi>. · 맵<Hi>지 않고</Hi> 맛있어요.</p>
             <p>Stem + 지 않다. It can take 고 and 지만 just like any other word.</p>
           </Callout>
           <Callout kind="rule" title="-아/어서  (so, because)">
-            <p className="font-kr text-lg">싸고 맛있<b>어서</b> 자주 먹어요.</p>
+            <p className="font-kr text-lg">싸고 맛있<Hi>어서</Hi> 자주 먹어요.</p>
             <p>Cause first, result second. Important: no 았/었 before 어서 — the tense lives on the final verb.</p>
           </Callout>
           <Callout kind="rule" title="-지만  (but)">
-            <p className="font-kr text-lg">피자는 조금 짜<b>지만</b> 맛있어요.</p>
+            <p className="font-kr text-lg">피자는 조금 짜<Hi>지만</Hi> 맛있어요.</p>
             <p>Attach straight to the stem. Pair it with 은/는 on both sides to make the contrast obvious.</p>
           </Callout>
         </div>
         <div className="mt-4">
           <Callout kind="warn" title="에 vs 에서 — the mistake the grader is looking for">
-            <p className="font-kr text-lg">공원<b>에</b> 갔어요. <span className="font-sans text-sm text-slate-600">(went TO the park — destination, with 가다/오다)</span></p>
-            <p className="font-kr text-lg">공원<b>에서</b> 운동했어요. <span className="font-sans text-sm text-slate-600">(exercised AT the park — where the action happens)</span></p>
+            <p className="font-kr text-lg">공원<Hi>에</Hi> 갔어요. <span className="font-sans text-sm text-slate-600">(went TO the park — destination, with 가다/오다)</span></p>
+            <p className="font-kr text-lg">공원<Hi>에서</Hi> 운동했어요. <span className="font-sans text-sm text-slate-600">(exercised AT the park — where the action happens)</span></p>
           </Callout>
         </div>
       </Card>
@@ -407,12 +412,12 @@ export default function Writing() {
         </div>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <Callout kind="rule" title="Verb stem + 고 싶어요">
-            <p className="font-kr text-lg">먹다 → 먹<b>고 싶어요</b> · 마시다 → 마시<b>고 싶어요</b> · 가다 → 가<b>고 싶어요</b></p>
+            <p className="font-kr text-lg">먹다 → 먹<Hi>고 싶어요</Hi> · 마시다 → 마시<Hi>고 싶어요</Hi> · 가다 → 가<Hi>고 싶어요</Hi></p>
             <p>No 아/어 juggling — 고 attaches to the bare stem, always the same shape.</p>
           </Callout>
           <Callout kind="warn" title="Only for me and you">
             <p>
-              -고 싶다 is for <b>I</b> and <b>you</b>. For a third person Korean says 먹고 싶<b>어 하다</b>. At this level, just keep your sentences in 저는 / 씨는 questions.
+              -고 싶다 is for <Hi>I</Hi> and <Hi>you</Hi>. For a third person Korean says 먹고 싶<Hi>어 하다</Hi>. At this level, just keep your sentences in 저는 / 씨는 questions.
             </p>
           </Callout>
         </div>
@@ -424,7 +429,7 @@ export default function Writing() {
         <AdjTable rows={ADJ2} caption="ㅂ = ㅂ-irregular: the ㅂ turns into 우 before a vowel ending." />
         <div className="mt-4">
           <Callout kind="tip" title="The ㅂ-irregular, in one line">
-            <p className="font-kr text-xl">맵다 → 맵 + 어요 → 매<b>워</b>요 → 매<b>웠</b>어요</p>
+            <p className="font-kr text-xl">맵다 → 맵 + 어요 → 매<Hi>워</Hi>요 → 매<Hi>웠</Hi>어요</p>
             <p>
               Drop the ㅂ, add 우, then the ending: 어렵다 → 어려워요, 춥다 → 추워요, 즐겁다 → 즐거워요. But the 고 form and the 지 않다 form keep the ㅂ:
               <span className="font-kr"> 맵고, 맵지 않아요</span>. 깨끗하다 and 피곤하다 are 하다 words, so they are completely regular.
