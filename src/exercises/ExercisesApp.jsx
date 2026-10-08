@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react'
-import Present from './Present'
-import Past from './Past'
-import Adverbs from './Adverbs'
+import Writing from './Writing'
+import Exercises from './Exercises'
 
 const NAV = [
   { id: 'top', label: '🏠 Início' },
-  { id: 'present', label: '🕒 현재' },
-  { id: 'past', label: '⏪ 과거' },
-  { id: 'adverbs', label: '🔸 부사' },
+  { id: 'writing', label: '✍️ 쓰기' },
+  { id: 'practice', label: '📝 연습' },
 ]
 
 function Nav() {
@@ -36,8 +34,8 @@ function Nav() {
             {n.label}
           </a>
         ))}
-        <a href="exercises.html" className="shrink-0 rounded-full bg-white px-4 py-1.5 font-kr text-lg text-slate-700 shadow-sm hover:bg-yellow-100">
-          ✍️ 쓰기 · 연습 →
+        <a href="materials.html" className="shrink-0 rounded-full bg-white px-4 py-1.5 text-lg font-bold text-slate-700 shadow-sm hover:bg-yellow-100">
+          ← 문법
         </a>
         <a href="index.html" className="shrink-0 rounded-full bg-white px-4 py-1.5 text-lg font-bold text-slate-700 shadow-sm hover:bg-yellow-100">
           ← Course
@@ -47,27 +45,25 @@ function Nav() {
   )
 }
 
-export default function MaterialsApp() {
+export default function ExercisesApp() {
   return (
     <div className="min-h-screen">
       <Nav />
       <main className="mx-auto max-w-5xl space-y-16 px-4 pb-24 pt-6 sm:space-y-20">
-        <header id="top" className="scroll-mt-24 rounded-[2.5rem] bg-gradient-to-br from-emerald-300 via-sky-300 to-violet-300 p-6 shadow-xl sm:p-10">
-          <p className="text-sm font-extrabold uppercase tracking-widest text-slate-800/70">건국 한국어 1-1 · Materials · 2nd batch</p>
-          <h1 className="mt-2 font-kr text-6xl leading-tight text-slate-900 sm:text-8xl">문법 정리</h1>
-          <p className="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">Present · Past · Adverbs</p>
+        <header id="top" className="scroll-mt-24 rounded-[2.5rem] bg-gradient-to-br from-rose-300 via-amber-200 to-violet-300 p-6 shadow-xl sm:p-10">
+          <p className="text-sm font-extrabold uppercase tracking-widest text-slate-800/70">건국 한국어 1-1 · Writing &amp; Practice</p>
+          <h1 className="mt-2 font-kr text-6xl leading-tight text-slate-900 sm:text-8xl">쓰기 · 연습</h1>
+          <p className="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">The two worksheets, plus three more to practise</p>
           <p className="mt-4 max-w-2xl text-base font-semibold text-slate-800 sm:text-lg">
-            Verbs and adjectives as the book teaches them (어휘 1–2, 문법 및 표현 1–4), with the worksheet and handout rules. The 쓰기 texts and the
-            practice prompts now live on the{' '}
-            <a href="exercises.html" className="underline decoration-2 underline-offset-2 hover:text-violet-800">
-              쓰기 · 연습
+            First the two 쓰기 texts sentence by sentence, then three extra prompts built from the same toolbox. The grammar behind all of it lives on the{' '}
+            <a href="materials.html" className="underline decoration-2 underline-offset-2 hover:text-violet-800">
+              문법 정리
             </a>{' '}
             page. Tap 🔊 to hear any Korean.
           </p>
         </header>
-        <Present />
-        <Past />
-        <Adverbs />
+        <Writing />
+        <Exercises />
         <footer className="pt-8 text-center">
           <p className="font-kr text-3xl text-slate-700">수고했어요! 🎉</p>
           <p className="text-sm text-slate-500">Great work — Korean Regular Course · Konkuk University</p>

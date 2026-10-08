@@ -9,6 +9,7 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
         materials: resolve(import.meta.dirname, 'materials.html'),
+        exercises: resolve(import.meta.dirname, 'exercises.html'),
       },
     },
   },
