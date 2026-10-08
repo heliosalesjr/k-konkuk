@@ -53,7 +53,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-3">
         <a href="#greetings" className="rounded-[2rem] bg-gradient-to-br from-yellow-200 to-rose-100 p-5 shadow-md ring-2 ring-white transition hover:scale-[1.01]">
           <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">Lesson 1 · 1과</div>
           <div className="font-kr text-3xl text-slate-900">인사와 소개</div>
@@ -63,6 +63,11 @@ export default function Hero() {
           <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">Lesson 2 · 2과 materials</div>
           <div className="font-kr text-3xl text-slate-900">현재 · 과거 · 부사</div>
           <div className="text-sm font-semibold text-slate-700">Present · Past · Adverbs →</div>
+        </a>
+        <a href="exercises.html" className="rounded-[2rem] bg-gradient-to-br from-rose-200 to-amber-100 p-5 shadow-md ring-2 ring-white transition hover:scale-[1.01]">
+          <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">Lesson 2 · 쓰기 worksheets</div>
+          <div className="font-kr text-3xl text-slate-900">쓰기 · 연습</div>
+          <div className="text-sm font-semibold text-slate-700">Writing 1 &amp; 2 · practice →</div>
         </a>
       </div>
 
