@@ -49,6 +49,15 @@ function Nav() {
             {n.label}
           </a>
         ))}
+        <a href="materials.html" className="shrink-0 rounded-full bg-white px-4 py-1.5 font-kr text-lg text-slate-700 shadow-sm hover:bg-yellow-100">
+          📘 문법 정리 →
+        </a>
+        <a href="exercises.html" className="shrink-0 rounded-full bg-white px-4 py-1.5 font-kr text-lg text-slate-700 shadow-sm hover:bg-yellow-100">
+          ✍️ 쓰기 · 연습 →
+        </a>
+        <a href="exercises.html#talking" className="shrink-0 rounded-full bg-sky-600 px-4 py-1.5 font-kr text-lg text-white shadow-sm hover:bg-sky-700">
+          🗣️ 질문 25 →
+        </a>
       </div>
     </nav>
   )
