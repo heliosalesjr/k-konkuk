@@ -1,4 +1,5 @@
 import { speak } from '../lib/korean'
+import Progression from './Progression'
 
 // One colour per job in the sentence — the same colours are used everywhere in the app.
 export const ROLES = {
@@ -76,8 +77,8 @@ const TONES = {
 
 export function Section({ id, icon, kr, title, tone = 'amber', tag, children }) {
   return (
-    <section id={id} className="scroll-mt-24">
-      <header className={`mb-6 flex flex-wrap items-center gap-4 rounded-[2rem] bg-gradient-to-r ${TONES[tone]} p-5 shadow-md sm:p-7`}>
+    <section id={id} className="scroll-mt-32">
+      <header className={`mb-5 flex flex-wrap items-center gap-4 rounded-[2rem] bg-gradient-to-r ${TONES[tone]} p-5 shadow-md sm:p-7`}>
         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white/80 text-4xl shadow-inner sm:h-20 sm:w-20 sm:text-5xl">{icon}</div>
         <div className="min-w-0 flex-1">
           <h2 className="font-kr text-4xl leading-tight text-slate-900 sm:text-6xl">{kr}</h2>
@@ -85,6 +86,8 @@ export function Section({ id, icon, kr, title, tone = 'amber', tag, children }) 
         </div>
         {tag && <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-bold text-slate-700 shadow-sm">📘 {tag}</span>}
       </header>
+      {/* If this subject is taught across several units, show where this step sits. */}
+      <Progression sectionId={id} />
       <div className="space-y-6">{children}</div>
     </section>
   )

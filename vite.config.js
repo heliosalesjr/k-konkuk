@@ -8,6 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
+        basics: resolve(import.meta.dirname, 'basics.html'),
         materials: resolve(import.meta.dirname, 'materials.html'),
         exercises: resolve(import.meta.dirname, 'exercises.html'),
         verbs: resolve(import.meta.dirname, 'verbs.html'),

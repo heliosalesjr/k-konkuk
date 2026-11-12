@@ -10,15 +10,6 @@ const GOALS = [
   { id: 'you-not', kr: '루카스는 일본 사람이 아니에요.', en: 'Lucas is not from Japan.', label: 'What someone else is not', to: 'anieyo' },
 ]
 
-// The 3rd batch: the "40 verbos" and "총복습2" handouts, split into five lesson pages.
-const BATCH3 = [
-  { href: 'verbs.html', icon: '🧪', kr: '동사 활용', en: 'Present · past · future · 40 verbs', tag: '3차 · 40 verbos', tone: 'from-sky-200 to-emerald-100' },
-  { href: 'honorifics.html', icon: '🙇', kr: '존댓말', en: 'Formal · honorific · humble verbs', tag: '3차 · 40 verbos', tone: 'from-violet-200 to-sky-100' },
-  { href: 'counters.html', icon: '🔢', kr: '수 · 부사 · 조사', en: 'Counters, money, adverbs, particles', tag: '3차 · 총복습 1–29', tone: 'from-emerald-200 to-amber-100' },
-  { href: 'irregulars.html', icon: '⚡', kr: '불규칙 · 관형형', en: 'ㄷ ㅂ ㅡ ㄹ · adjective + noun', tag: '3차 · 총복습 30–46', tone: 'from-rose-200 to-amber-100' },
-  { href: 'grammar.html', icon: '🧰', kr: '문법 · 연결어미', en: 'Grammar box, connectors, exam tips', tag: '3차 · 총복습 47–90', tone: 'from-amber-200 to-rose-100' },
-]
-
 const KEY = 'korean-konkuk-goals-v1'
 
 function useChecked() {
@@ -48,60 +39,17 @@ export default function Hero() {
     <section id="start" className="scroll-mt-24 space-y-6">
       <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-yellow-300 via-rose-300 to-sky-300 p-6 shadow-xl sm:p-10">
         <div className="pointer-events-none absolute -right-6 -top-6 text-[9rem] opacity-20 sm:text-[13rem]">🇰🇷</div>
-        <p className="text-sm font-extrabold uppercase tracking-widest text-slate-800/70">건국 한국어 1-1 · Lesson 1</p>
+        <p className="text-sm font-extrabold uppercase tracking-widest text-slate-800/70">유닛 1 · 기초 · 1과 인사와 소개</p>
         <h1 className="mt-2 font-kr text-6xl leading-tight text-slate-900 sm:text-8xl">안녕하세요!</h1>
         <p className="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">
           <span className="font-kr">1과 인사와 소개</span> · Greetings &amp; Introductions
         </p>
         <p className="mt-4 max-w-2xl text-base font-semibold text-slate-800 sm:text-lg">
-          Block 1: who am I, where am I from, and who are you? Colourful explanations, word-order pictures, games and a quiz — all following the order of your textbook.
+          Who am I, where am I from, and who are you? Colourful explanations, word-order pictures, games and a quiz — in the order your textbook follows.
         </p>
         <div className="mt-5 flex flex-wrap items-center gap-3">
           <Speak text="안녕하세요" />
           <span className="text-sm font-bold text-slate-800">Tap 🔊 anywhere to hear Korean out loud.</span>
-        </div>
-      </div>
-
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <a href="#greetings" className="rounded-[2rem] bg-gradient-to-br from-yellow-200 to-rose-100 p-5 shadow-md ring-2 ring-white transition hover:scale-[1.01]">
-          <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">Lesson 1 · 1과</div>
-          <div className="font-kr text-3xl text-slate-900">인사와 소개</div>
-          <div className="text-sm font-semibold text-slate-700">Greetings &amp; introductions · you are here</div>
-        </a>
-        <a href="materials.html" className="rounded-[2rem] bg-gradient-to-br from-sky-200 to-violet-100 p-5 shadow-md ring-2 ring-white transition hover:scale-[1.01]">
-          <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">Lesson 2 · 2과 materials</div>
-          <div className="font-kr text-3xl text-slate-900">현재 · 과거 · 부사</div>
-          <div className="text-sm font-semibold text-slate-700">Present · Past · Adverbs →</div>
-        </a>
-        <a href="exercises.html" className="rounded-[2rem] bg-gradient-to-br from-rose-200 to-amber-100 p-5 shadow-md ring-2 ring-white transition hover:scale-[1.01]">
-          <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">Lesson 2 · 쓰기 worksheets</div>
-          <div className="font-kr text-3xl text-slate-900">쓰기 · 연습</div>
-          <div className="text-sm font-semibold text-slate-700">Writing 1 &amp; 2 · practice →</div>
-        </a>
-        <a href="exercises.html#talking" className="rounded-[2rem] bg-gradient-to-br from-sky-200 to-emerald-100 p-5 shadow-md ring-2 ring-white transition hover:scale-[1.01]">
-          <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">Lesson 2 · 말하기 worksheet</div>
-          <div className="font-kr text-3xl text-slate-900">질문 25개</div>
-          <div className="text-sm font-semibold text-slate-700">친구하고 같이 이야기하세요 →</div>
-        </a>
-      </div>
-
-      <div className="rounded-[2rem] bg-white/90 p-5 shadow-md sm:p-7">
-        <div className="mb-4">
-          <h2 className="text-2xl font-extrabold text-slate-900">📦 3차 · Review of the last month</h2>
-          <p className="text-sm text-slate-600">
-            The two big handouts, turned into five lessons: verb conjugation, honorifics, counters and particles, irregulars, and the grammar box.
-          </p>
-        </div>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {BATCH3.map((b) => (
-            <a key={b.href} href={b.href} className={`rounded-[2rem] bg-gradient-to-br ${b.tone} p-5 shadow-md ring-2 ring-white transition hover:scale-[1.01]`}>
-              <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">{b.tag}</div>
-              <div className="font-kr text-3xl text-slate-900">
-                {b.icon} {b.kr}
-              </div>
-              <div className="text-sm font-semibold text-slate-700">{b.en} →</div>
-            </a>
-          ))}
         </div>
       </div>
 
