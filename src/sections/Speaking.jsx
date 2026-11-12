@@ -12,7 +12,7 @@ function Dialogue({ d, showEn }) {
         const side = speakers.indexOf(l.who)
         return (
           <div key={i} className={`flex items-start gap-3 ${side === 1 ? 'flex-row-reverse' : ''}`}>
-            <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full font-kr text-lg font-bold shadow-sm ${colors[side % 3]}`} title={d.cast?.[l.who]}>
+            <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full font-kr text-lg shadow-sm ${colors[side % 3]}`} title={d.cast?.[l.who]}>
               {l.who}
             </div>
             <div className={`min-w-0 max-w-[85%] rounded-3xl px-4 py-3 shadow-sm ${side === 1 ? 'rounded-tr-md bg-rose-50' : 'rounded-tl-md bg-sky-50'}`}>

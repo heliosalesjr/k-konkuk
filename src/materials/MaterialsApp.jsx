@@ -42,6 +42,9 @@ function Nav() {
         <a href="index.html" className="shrink-0 rounded-full bg-white px-4 py-1.5 text-lg font-bold text-slate-700 shadow-sm hover:bg-yellow-100">
           ← Course
         </a>
+        <a href="verbs.html" className="shrink-0 rounded-full bg-violet-600 px-4 py-1.5 font-kr text-lg text-white shadow-sm hover:bg-violet-700">
+          📦 3차 복습 →
+        </a>
       </div>
     </nav>
   )

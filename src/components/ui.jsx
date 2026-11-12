@@ -30,7 +30,7 @@ export function Block({ role = 'subj', base, particle, gloss, size = 'lg', tag =
     <div className="flex flex-col items-center gap-1.5">
       <div className={`whitespace-nowrap rounded-2xl border-2 font-kr leading-tight shadow-sm ${SIZES[size]} ${r.box}`}>
         {base}
-        {particle && <span className={`ml-0.5 rounded-lg bg-white px-1.5 font-black shadow-sm ${r.mark}`}>{particle}</span>}
+        {particle && <span className={`ml-0.5 rounded-lg bg-white px-1.5 shadow-sm ${r.mark}`}>{particle}</span>}
       </div>
       {gloss && <div className="max-w-[9.5rem] text-center text-xs font-semibold leading-snug text-slate-600 sm:text-sm">{gloss}</div>}
       {tag && <RoleTag role={role} />}

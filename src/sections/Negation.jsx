@@ -99,7 +99,7 @@ export default function Negation() {
                       </td>
                       <td className="rounded-r-2xl bg-slate-50 p-3 font-kr text-3xl text-slate-900">
                         {n}
-                        <b className="rounded-lg bg-orange-200 px-1 text-orange-900">{g.with ? '이' : '가'}</b> 아니에요
+                        <span className="rounded-lg bg-orange-200 px-1 text-orange-900">{g.with ? '이' : '가'}</span> 아니에요
                       </td>
                     </tr>
                   )
@@ -111,7 +111,7 @@ export default function Negation() {
         <div className="mt-4 space-y-3">
           <Callout kind="warn" title="Watch the space!">
             <p>
-              <span className="font-kr text-lg">학생<b>이에요</b></span> (is a student) has <b>no space</b>. <span className="font-kr text-lg">학생<b>이 아니에요</b></span> (is NOT a student) has a space before 아니에요, because 이/가 is a particle and 아니에요 is its own word.
+              <span className="font-kr text-lg">학생<span className="text-blue-700">이에요</span></span> (is a student) has <b>no space</b>. <span className="font-kr text-lg">학생<span className="text-blue-700">이 아니에요</span></span> (is NOT a student) has a space before 아니에요, because 이/가 is a particle and 아니에요 is its own word.
             </p>
           </Callout>
           <Callout kind="note" title="Same 이/가 as before">

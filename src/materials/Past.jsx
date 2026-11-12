@@ -63,22 +63,22 @@ export default function Past() {
         </div>
         <div className="grid gap-3 sm:grid-cols-3">
           <Callout kind="rule" title="ㅏ or ㅗ → 았어요">
-            <p className="font-kr text-lg">가다 → 가<b>았어요</b> → <b>갔어요</b></p>
-            <p className="font-kr text-lg">보다 → 보<b>았어요</b> → <b>봤어요</b></p>
+            <p className="font-kr text-lg">가다 → 가<span className="text-blue-700">았어요</span> → <span className="text-blue-700">갔어요</span></p>
+            <p className="font-kr text-lg">보다 → 보<span className="text-blue-700">았어요</span> → <span className="text-blue-700">봤어요</span></p>
           </Callout>
           <Callout kind="rule" title="Anything else → 었어요">
-            <p className="font-kr text-lg">먹다 → 먹<b>었어요</b></p>
-            <p className="font-kr text-lg">쉬다 → 쉬<b>었어요</b></p>
+            <p className="font-kr text-lg">먹다 → 먹<span className="text-blue-700">었어요</span></p>
+            <p className="font-kr text-lg">쉬다 → 쉬<span className="text-blue-700">었어요</span></p>
           </Callout>
           <Callout kind="rule" title="-하다 → 했어요">
-            <p className="font-kr text-lg">공부하다 → 공부<b>했어요</b></p>
-            <p className="font-kr text-lg">일하다 → 일<b>했어요</b></p>
+            <p className="font-kr text-lg">공부하다 → 공부<span className="text-blue-700">했어요</span></p>
+            <p className="font-kr text-lg">일하다 → 일<span className="text-blue-700">했어요</span></p>
           </Callout>
         </div>
         <div className="mt-4">
           <Callout kind="tip" title="Stems that change shape (from the handout)">
-            <p className="font-kr text-lg">마시다 → 마시 + 었어요 → <b>마셨어요</b> · 가르치다 → 가르치 + 었어요 → <b>가르쳤어요</b> · 기다리다 → 기다리 + 었어요 → <b>기다렸어요</b></p>
-            <p className="font-kr text-lg">보내다 → 보내 + 었어요 → 었 is dropped → <b>보냈어요</b> · 쓰다 → the — is dropped, then ㅓ is added → <b>썼어요</b></p>
+            <p className="font-kr text-lg">마시다 → 마시 + 었어요 → <span className="text-blue-700">마셨어요</span> · 가르치다 → 가르치 + 었어요 → <span className="text-blue-700">가르쳤어요</span> · 기다리다 → 기다리 + 었어요 → <span className="text-blue-700">기다렸어요</span></p>
+            <p className="font-kr text-lg">보내다 → 보내 + 었어요 → 었 is dropped → <span className="text-blue-700">보냈어요</span> · 쓰다 → the — is dropped, then ㅓ is added → <span className="text-blue-700">썼어요</span></p>
           </Callout>
         </div>
       </Card>
@@ -133,7 +133,7 @@ export default function Past() {
         <H3 sub="Time words (오늘 아침, 어제 저녁…) take 에 in the past sentences.">Time phrases with 에</H3>
         <Callout kind="note" title="Watch the 에 and 에서">
           <p>
-            <span className="font-kr text-lg">어제 저녁<b>에</b></span> (in the evening, yesterday) and <span className="font-kr text-lg">지난 주말<b>에</b></span> (last weekend) use 에 for time. <span className="font-kr text-lg">학교<b>에서</b></span> and <span className="font-kr text-lg">서울<b>에서</b></span> use 에서 for the place where the action happens.
+            <span className="font-kr text-lg">어제 저녁<span className="text-blue-700">에</span></span> (in the evening, yesterday) and <span className="font-kr text-lg">지난 주말<span className="text-blue-700">에</span></span> (last weekend) use 에 for time. <span className="font-kr text-lg">학교<span className="text-blue-700">에서</span></span> and <span className="font-kr text-lg">서울<span className="text-blue-700">에서</span></span> use 에서 for the place where the action happens.
           </p>
         </Callout>
       </Card>

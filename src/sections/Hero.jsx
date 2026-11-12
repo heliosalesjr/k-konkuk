@@ -10,6 +10,15 @@ const GOALS = [
   { id: 'you-not', kr: '루카스는 일본 사람이 아니에요.', en: 'Lucas is not from Japan.', label: 'What someone else is not', to: 'anieyo' },
 ]
 
+// The 3rd batch: the "40 verbos" and "총복습2" handouts, split into five lesson pages.
+const BATCH3 = [
+  { href: 'verbs.html', icon: '🧪', kr: '동사 활용', en: 'Present · past · future · 40 verbs', tag: '3차 · 40 verbos', tone: 'from-sky-200 to-emerald-100' },
+  { href: 'honorifics.html', icon: '🙇', kr: '존댓말', en: 'Formal · honorific · humble verbs', tag: '3차 · 40 verbos', tone: 'from-violet-200 to-sky-100' },
+  { href: 'counters.html', icon: '🔢', kr: '수 · 부사 · 조사', en: 'Counters, money, adverbs, particles', tag: '3차 · 총복습 1–29', tone: 'from-emerald-200 to-amber-100' },
+  { href: 'irregulars.html', icon: '⚡', kr: '불규칙 · 관형형', en: 'ㄷ ㅂ ㅡ ㄹ · adjective + noun', tag: '3차 · 총복습 30–46', tone: 'from-rose-200 to-amber-100' },
+  { href: 'grammar.html', icon: '🧰', kr: '문법 · 연결어미', en: 'Grammar box, connectors, exam tips', tag: '3차 · 총복습 47–90', tone: 'from-amber-200 to-rose-100' },
+]
+
 const KEY = 'korean-konkuk-goals-v1'
 
 function useChecked() {
@@ -74,6 +83,26 @@ export default function Hero() {
           <div className="font-kr text-3xl text-slate-900">질문 25개</div>
           <div className="text-sm font-semibold text-slate-700">친구하고 같이 이야기하세요 →</div>
         </a>
+      </div>
+
+      <div className="rounded-[2rem] bg-white/90 p-5 shadow-md sm:p-7">
+        <div className="mb-4">
+          <h2 className="text-2xl font-extrabold text-slate-900">📦 3차 · Review of the last month</h2>
+          <p className="text-sm text-slate-600">
+            The two big handouts, turned into five lessons: verb conjugation, honorifics, counters and particles, irregulars, and the grammar box.
+          </p>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {BATCH3.map((b) => (
+            <a key={b.href} href={b.href} className={`rounded-[2rem] bg-gradient-to-br ${b.tone} p-5 shadow-md ring-2 ring-white transition hover:scale-[1.01]`}>
+              <div className="text-xs font-extrabold uppercase tracking-wide text-slate-600">{b.tag}</div>
+              <div className="font-kr text-3xl text-slate-900">
+                {b.icon} {b.kr}
+              </div>
+              <div className="text-sm font-semibold text-slate-700">{b.en} →</div>
+            </a>
+          ))}
+        </div>
       </div>
 
       <div className="rounded-[2rem] bg-white/90 p-5 shadow-md sm:p-7">

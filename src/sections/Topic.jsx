@@ -39,7 +39,7 @@ export default function Topic() {
                     <td className="bg-slate-50 p-3 text-2xl font-black text-slate-400">+ {r.with ? '은' : '는'}</td>
                     <td className="rounded-r-2xl bg-slate-50 p-3 font-kr text-3xl text-slate-900">
                       {r.noun}
-                      <b className="rounded-lg bg-rose-200 px-1 text-rose-900">{r.with ? '은' : '는'}</b>
+                      <span className="rounded-lg bg-rose-200 px-1 text-rose-900">{r.with ? '은' : '는'}</span>
                     </td>
                   </tr>
                 )

@@ -48,7 +48,7 @@ export default function Batchim() {
               사<span className="rounded-xl bg-rose-300 px-1">람</span>
             </p>
             <p className="mt-1 text-sm text-slate-700">
-              <span className="font-kr text-lg">람</span> = ㄹ + ㅏ + <b className="text-rose-700">ㅁ</b> ← at the bottom
+              <span className="font-kr text-lg">람</span> = ㄹ + ㅏ + <span className="text-rose-700">ㅁ</span> ← at the bottom
             </p>
           </div>
           <div className="rounded-3xl bg-sky-50 p-4 text-center ring-2 ring-sky-200">

@@ -58,6 +58,9 @@ function Nav() {
         <a href="exercises.html#talking" className="shrink-0 rounded-full bg-sky-600 px-4 py-1.5 font-kr text-lg text-white shadow-sm hover:bg-sky-700">
           🗣️ 질문 25 →
         </a>
+        <a href="verbs.html" className="shrink-0 rounded-full bg-violet-600 px-4 py-1.5 font-kr text-lg text-white shadow-sm hover:bg-violet-700">
+          📦 3차 복습 →
+        </a>
       </div>
     </nav>
   )

@@ -30,7 +30,7 @@ function HaVerbs() {
           <div className="min-w-0">
             <span className="font-kr text-2xl text-slate-900">
               {n.kr}
-              <b className="rounded-md bg-yellow-200 px-1 text-yellow-900">{n.slot.endsWith('을') ? '을' : '를'}</b>
+              <span className="rounded-md bg-yellow-200 px-1 text-yellow-900">{n.slot.endsWith('을') ? '을' : '를'}</span>
             </span>
             <div className="text-xs font-semibold text-slate-500">{n.en}</div>
           </div>
@@ -65,13 +65,13 @@ export default function Present() {
         </div>
         <div className="grid gap-3 sm:grid-cols-3">
           <Callout kind="rule" title="ㅏ or ㅗ → 아요">
-            <p className="font-kr text-lg">만나다 → 만나<b>요</b>, 자다 → 자<b>요</b>, 오다 → 와<b>요</b></p>
+            <p className="font-kr text-lg">만나다 → 만나<span className="text-blue-700">요</span>, 자다 → 자<span className="text-blue-700">요</span>, 오다 → 와<span className="text-blue-700">요</span></p>
           </Callout>
           <Callout kind="rule" title="Anything else → 어요">
-            <p className="font-kr text-lg">먹다 → 먹<b>어요</b>, 읽다 → 읽<b>어요</b>, 쉬다 → 쉬<b>어요</b></p>
+            <p className="font-kr text-lg">먹다 → 먹<span className="text-blue-700">어요</span>, 읽다 → 읽<span className="text-blue-700">어요</span>, 쉬다 → 쉬<span className="text-blue-700">어요</span></p>
           </Callout>
           <Callout kind="rule" title="-하다 → 해요">
-            <p className="font-kr text-lg">공부하다 → 공부<b>해요</b>, 일하다 → 일<b>해요</b></p>
+            <p className="font-kr text-lg">공부하다 → 공부<span className="text-blue-700">해요</span>, 일하다 → 일<span className="text-blue-700">해요</span></p>
           </Callout>
         </div>
         <div className="mt-4 space-y-3">
@@ -92,7 +92,7 @@ export default function Present() {
         <H3 sub="Noun + 을/를 + 하다. The noun gets the particle, 하다 becomes 해요.">Verbs with 하다 (어휘 2)</H3>
         <HaVerbs />
         <p className="mt-3 text-sm text-slate-600">
-          Pattern from the book: <span className="font-kr text-lg">숙제<b>를</b> 해요</span> (I do homework), <span className="font-kr text-lg">운동<b>을</b> 해요</span> (I exercise).
+          Pattern from the book: <span className="font-kr text-lg">숙제<span className="text-blue-700">를</span> 해요</span> (I do homework), <span className="font-kr text-lg">운동<span className="text-blue-700">을</span> 해요</span> (I exercise).
         </p>
       </Card>
 

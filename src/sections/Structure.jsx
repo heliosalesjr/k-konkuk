@@ -124,7 +124,7 @@ export default function Structure() {
           ))}
         </div>
         <p className="mt-4 text-sm text-slate-600">
-          The subject is a noun + <b>이/가</b> or <b>은/는</b>. The predicate can be a verb, an adjective, or a noun + <span className="font-kr text-base">이다</span> (“to be”) — that last one is what we use to say who we are!
+          The subject is a noun + <span className="text-blue-700">이/가</span> or <span className="text-blue-700">은/는</span>. The predicate can be a verb, an adjective, or a noun + <span className="font-kr text-base">이다</span> (“to be”) — that last one is what we use to say who we are!
         </p>
       </Card>
 
@@ -162,7 +162,7 @@ export default function Structure() {
                 <div className="text-sm text-slate-600">
                   <span className="font-kr text-lg text-slate-900">
                     {row.ex.base}
-                    <b className={ROLES[row.role].mark}>{row.ex.particle}</b>
+                    <span className={ROLES[row.role].mark}>{row.ex.particle}</span>
                   </span>{' '}
                   · {row.exEn}
                 </div>
@@ -190,7 +190,7 @@ export default function Structure() {
           </div>
         </div>
         <p className="mt-4 text-sm text-slate-600">
-          Same letters, different spaces: <span className="font-kr text-base">아버지 가방에</span> (father, bag) vs <span className="font-kr text-base">아버지가 방에</span> (father<b>가</b>, room). A particle always stays glued to its noun, and the space comes <b>after</b> it.
+          Same letters, different spaces: <span className="font-kr text-base">아버지 가방에</span> (father, bag) vs <span className="font-kr text-base">아버지가 방에</span> (father<span className="text-blue-700">가</span>, room). A particle always stays glued to its noun, and the space comes <b>after</b> it.
         </p>
       </Card>
 

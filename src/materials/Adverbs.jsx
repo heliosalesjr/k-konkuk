@@ -46,7 +46,7 @@ export default function Adverbs() {
         </div>
         <Callout kind="tip" title="Adverb first, then the verb">
           <p>
-            <span className="font-kr text-lg">저는 <b>어제</b> 공부했어요.</span> · <span className="font-kr text-lg">저는 <b>오늘</b> 친구를 만나요.</span> · <span className="font-kr text-lg">저는 <b>보통</b> 혼자 먹어요.</span>
+            <span className="font-kr text-lg">저는 <span className="text-blue-700">어제</span> 공부했어요.</span> · <span className="font-kr text-lg">저는 <span className="text-blue-700">오늘</span> 친구를 만나요.</span> · <span className="font-kr text-lg">저는 <span className="text-blue-700">보통</span> 혼자 먹어요.</span>
           </p>
         </Callout>
       </Card>

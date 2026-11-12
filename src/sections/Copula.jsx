@@ -34,7 +34,7 @@ export default function Copula() {
                   <span className="text-slate-300">→</span>
                   <span className="font-kr text-3xl text-slate-900">
                     {e.noun}
-                    <b className="rounded-lg bg-violet-200 px-1 text-violet-900">이에요</b>
+                    <span className="rounded-lg bg-violet-200 px-1 text-violet-900">이에요</span>
                   </span>
                 </div>
               ))}
@@ -52,7 +52,7 @@ export default function Copula() {
                   <span className="text-slate-300">→</span>
                   <span className="font-kr text-3xl text-slate-900">
                     {e.noun}
-                    <b className="rounded-lg bg-violet-200 px-1 text-violet-900">예요</b>
+                    <span className="rounded-lg bg-violet-200 px-1 text-violet-900">예요</span>
                   </span>
                 </div>
               ))}
@@ -132,7 +132,7 @@ export default function Copula() {
         <div className="mt-4">
           <Callout kind="tip" title="Names with 씨 are ALWAYS 예요">
             <p>
-              <span className="font-kr text-lg">씨</span> (Mr./Ms.) has no 받침, so: <span className="font-kr text-lg">조세핀 씨<b>예요</b></span>, <span className="font-kr text-lg">알리 씨<b>예요</b></span>. Without 씨, the name itself decides: <span className="font-kr text-lg">조세핀<b>이에요</b></span>, <span className="font-kr text-lg">알리<b>예요</b></span>.
+              <span className="font-kr text-lg">씨</span> (Mr./Ms.) has no 받침, so: <span className="font-kr text-lg">조세핀 씨<span className="text-blue-700">예요</span></span>, <span className="font-kr text-lg">알리 씨<span className="text-blue-700">예요</span></span>. Without 씨, the name itself decides: <span className="font-kr text-lg">조세핀<span className="text-blue-700">이에요</span></span>, <span className="font-kr text-lg">알리<span className="text-blue-700">예요</span></span>.
             </p>
           </Callout>
         </div>
