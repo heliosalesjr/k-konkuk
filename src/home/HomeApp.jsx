@@ -46,38 +46,54 @@ function UnitBlock({ unit }) {
   )
 }
 
-// One topic, shown as the ladder it actually is.
+// One topic, shown as the ladder it actually is. The steps are ALWAYS visible — this is
+// the index, so hiding the destinations behind a click would defeat the point.
 function TopicRow({ topic }) {
-  const [open, setOpen] = useState(false)
+  const [detail, setDetail] = useState(false)
   const stages = topic.stages.map(stageLabel)
   return (
     <div className="rounded-2xl bg-white/90 p-3 shadow-sm ring-1 ring-white">
-      <button type="button" onClick={() => setOpen(!open)} className="flex w-full items-center gap-2 text-left">
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
         <span className="text-xl">{topic.icon}</span>
         <span className="font-kr text-xl text-slate-900">{topic.kr}</span>
         <span className="text-sm font-bold text-slate-500">{topic.en}</span>
-        <span className="ml-auto flex items-center gap-1.5">
+        {stages.length > 1 && (
+          <button
+            type="button"
+            onClick={() => setDetail(!detail)}
+            className="ml-auto rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-extrabold text-slate-500 transition hover:bg-yellow-200 hover:text-slate-800"
+          >
+            {stages.length} steps {detail ? '▴' : '▾'}
+          </button>
+        )}
+      </div>
+
+      <ol className="mt-2 flex flex-wrap items-center gap-1.5">
+        {stages.map((st, i) => (
+          <li key={st.href} className="flex items-center gap-1.5">
+            {i > 0 && <span aria-hidden className="text-sm font-black text-slate-300">→</span>}
+            <a
+              href={st.href}
+              title={`${st.page.kr} · ${topic.stages[i].adds}`}
+              className="flex items-center gap-1.5 rounded-xl bg-slate-50 px-2.5 py-1 transition hover:bg-yellow-100"
+            >
+              <span className={`flex h-4 w-4 items-center justify-center rounded-full text-[9px] font-black text-white ${st.unit.dot}`}>{st.unit.n}</span>
+              <span className="font-kr text-base text-slate-800">{st.section.label}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+
+      {detail && (
+        <ol className="animate-pop mt-2 space-y-1">
           {stages.map((st, i) => (
-            <span key={i} className={`h-2 w-2 rounded-full ${st.unit.dot}`} title={`${st.unit.kr} · ${st.section.label}`} />
-          ))}
-          <span className="ml-1 text-xs font-extrabold text-slate-400">{stages.length > 1 ? `${stages.length} steps` : '1 step'}</span>
-          <span aria-hidden className="text-slate-400">{open ? '▴' : '▾'}</span>
-        </span>
-      </button>
-      {open && (
-        <ol className="animate-pop mt-2.5 space-y-1.5">
-          {stages.map((st, i) => (
-            <li key={st.href}>
-              <a href={st.href} className="flex items-start gap-2 rounded-xl bg-slate-50 p-2.5 transition hover:bg-yellow-50">
-                <span className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-black text-white ${st.unit.dot}`}>
-                  {i + 1}
-                </span>
-                <span className="min-w-0">
-                  <span className="font-kr text-lg text-slate-900">{st.section.label}</span>{' '}
-                  <span className="text-xs font-bold text-slate-400">· {st.page.kr}</span>
-                  <span className="block text-xs leading-snug text-slate-600">{topic.stages[i].adds}</span>
-                </span>
-              </a>
+            <li key={st.href} className="flex items-start gap-2 rounded-xl bg-slate-50 px-2.5 py-1.5 text-xs leading-snug">
+              <span className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[9px] font-black text-white ${st.unit.dot}`}>
+                {i + 1}
+              </span>
+              <span className="text-slate-600">
+                <span className="font-kr text-sm text-slate-900">{st.page.kr}</span> — {topic.stages[i].adds}
+              </span>
             </li>
           ))}
         </ol>
@@ -103,7 +119,7 @@ export default function HomeApp() {
       <main className="mx-auto max-w-5xl space-y-10 px-4 pb-24 pt-6">
         <header className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-yellow-300 via-rose-300 to-sky-300 p-6 shadow-xl sm:p-10">
           <div className="pointer-events-none absolute -right-6 -top-6 text-[9rem] opacity-20 sm:text-[13rem]">🇰🇷</div>
-          <p className="text-sm font-extrabold uppercase tracking-widest text-slate-800/70">건국대학교 · Konkuk University</p>
+          <p className="text-sm font-extrabold uppercase tracking-widest text-slate-800/70">Hélio&apos;s Way</p>
           <h1 className="mt-2 font-kr text-5xl leading-tight text-slate-900 sm:text-7xl">한국어 1-1</h1>
           <p className="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">Korean Regular Course</p>
           <p className="mt-4 max-w-2xl text-base font-semibold text-slate-800 sm:text-lg">
@@ -160,7 +176,7 @@ export default function HomeApp() {
 
         <footer className="pt-4 text-center">
           <p className="font-kr text-3xl text-slate-700">화이팅! 💪</p>
-          <p className="text-sm text-slate-500">Korean Regular Course · Konkuk University</p>
+          <p className="text-sm text-slate-500">Korean Regular Course · Hélio&apos;s Way</p>
         </footer>
       </main>
     </div>

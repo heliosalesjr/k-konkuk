@@ -141,7 +141,7 @@ export function CourseFooter({ page }) {
       </div>
       <div className="text-center">
         <p className="font-kr text-3xl text-slate-700">수고했어요! 🎉</p>
-        <p className="text-sm text-slate-500">Korean Regular Course · Konkuk University</p>
+        <p className="text-sm text-slate-500">Korean Regular Course · Hélio&apos;s Way</p>
       </div>
     </footer>
   )
